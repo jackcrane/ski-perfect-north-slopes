@@ -33,6 +33,7 @@
         <data android:scheme="com.perfectnorth.pnsmain"/>
         <data android:scheme="exp+rn-perfect-north"/>
         <data android:scheme="exp+rn-perfect-north"/>
+        <data android:scheme="exp+rn-perfect-north"/>
       </intent-filter>
     </activity>
     <activity android:name="com.facebook.react.devsupport.DevSettingsActivity"/>
