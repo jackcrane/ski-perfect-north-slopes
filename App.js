@@ -14,7 +14,6 @@ import WebView from 'react-native-webview';
 import Lesson from './components/Lesson';
 import Food from './components/Food';
 import SnowCams from './components/SnowCamsScreen';
-import NotificationHandler from './components/NotificationHandler';
 // import { StatusBar } from 'expo-status-bar';
 // import Notifs from './components/Notifs';
 
@@ -106,18 +105,15 @@ const Drawer = createDrawerNavigator();
 
 export default function App() {
   return (
-    <>
-      <NotificationHandler />
-      <NavigationContainer>
-        <Drawer.Navigator initialRouteName="Home" drawerContent={(props) => <CustomDrawerContent {...props} />}>
-          <Drawer.Screen name="Home" component={HomeScreen} options={{headerShown:false}}/>
-          <Drawer.Screen name="Snow Report" component={SnowReportScreen} />
-          <Drawer.Screen name="Snow Cams" component={SnowCamsScreen} />
-          <Drawer.Screen name="Lessons" component={LessonScreen} />
-          <Drawer.Screen name="Food" component={FoodScreen} />
-          {/* <Drawer.Screen name="Notifications" component={Notifs} /> */}
-        </Drawer.Navigator>
-      </NavigationContainer>
-    </>
+    <NavigationContainer>
+      <Drawer.Navigator initialRouteName="Home" drawerContent={(props) => <CustomDrawerContent {...props} />}>
+        <Drawer.Screen name="Home" component={HomeScreen} options={{headerShown:false}}/>
+        <Drawer.Screen name="Snow Report" component={SnowReportScreen} />
+        <Drawer.Screen name="Snow Cams" component={SnowCamsScreen} />
+        <Drawer.Screen name="Lessons" component={LessonScreen} />
+        <Drawer.Screen name="Food" component={FoodScreen} />
+        {/* <Drawer.Screen name="Notifications" component={Notifs} /> */}
+      </Drawer.Navigator>
+    </NavigationContainer>
   );
 }
