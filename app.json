@@ -13,9 +13,7 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.perfectnorth.pnsmain"
@@ -30,6 +28,19 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "description": ""
+    "description": "",
+    "plugins": ["sentry-expo"],
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "Perfect-north-slopes",
+            "project": "ski-pns",
+            "authToken": "75ff56febd8b4c7d800bc605da5837cdbcd2599be43342efbaebfa7026db5f55"
+          }
+        }
+      ]
+    }
   }
 }

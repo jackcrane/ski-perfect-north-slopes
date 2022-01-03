@@ -1,6 +1,0 @@
-module Pods_PerfectNorthSlopes {
-  umbrella header "Pods-PerfectNorthSlopes-umbrella.h"
-
-  export *
-  module * { export * }
-}
